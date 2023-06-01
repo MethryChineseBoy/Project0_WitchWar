@@ -1,0 +1,83 @@
+[33mcommit 208ac2c4d4e7f4503377bdb405914f0f258c4ff2[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: cyf1118 <cyf1118@175game.com>
+Date:   Wed Nov 3 16:37:14 2021 +0800
+
+    第十一次修改：
+    对象池更改为正确写法；
+    将渐变特效和金币与敌人子弹的飞行由协程实现更改为在Update中插值计算实现；
+    更改了buff系统
+
+[33mcommit 07f8cb0368307d0709f49adfc8fb073ed17f8a0c[m
+Author: cyf1118 <cyf1118@175game.com>
+Date:   Fri Oct 15 09:06:33 2021 +0800
+
+    第十次修改：
+    1.基于对象池和事件收发器完成了道具系统；
+    2.更改了层级背景；
+    3.利用Dictionary改写了敌人对象池和子弹对象池，使其可存储不同种类的对象并进行进出池操作。
+
+[33mcommit 06e7bda51c2055ceb9847b21dbd7605efe533815[m
+Author: cyf1118 <cyf1118@175game.com>
+Date:   Mon Oct 11 18:14:48 2021 +0800
+
+    第九次修改：
+    1.完成了道具系统的总体框架和buff功能实现；
+    2.修正了一个以前被忽略的子弹区域赋值隐患：当玩家存在多行子弹时，如果此时玩家的位置位于游戏画面的边缘，将会导致子弹生成在游戏画面外，从而导致区域赋值无效，进一步导致区域的判断出界无效。于是设置了这一种特殊情况的判断情况，当进入该判断情况时，将会return掉所有的区域判断、赋值以及移除的代码操作。
+
+[33mcommit dd6af0a46827e5417bd391efff0430087d9f2c79[m
+Author: cyf1118 <cyf1118@175game.com>
+Date:   Fri Sep 24 17:53:57 2021 +0800
+
+    第八次修改：
+    彻底改善了分区域碰撞检测的功能代码，解决了碰撞目标丢失的BUG。
+
+[33mcommit 412f24ea0450d44bc2a87c2d592ceb6a023c3a16[m
+Author: cyf1118 <cyf1118@175game.com>
+Date:   Sat Sep 18 16:59:49 2021 +0800
+
+    第七次修改：
+    1.对游戏的UI做了移动端的显示兼容；
+    2.写了敌人与敌人碰撞、敌人与子弹碰撞的分屏检测来优化项目；
+    3.统一了敌人与子弹的素材规格，方便碰撞检测等算法的操作。
+
+[33mcommit 4407df50f9b963fe2c8533900ecf2553e99c99df[m
+Author: cyf1118 <cyf1118@175game.com>
+Date:   Thu Sep 2 17:00:16 2021 +0800
+
+    第六次修改：设置了角色状态机和游戏界面切换状态机，为敌人制作了防重叠碰撞检测方法，并将操作方式完全改为了手机式的触屏操作。
+
+[33mcommit 3c4911c07cb9f6b06fe1540adcb97b331b1f6cb2[m
+Author: cyf1118 <cyf1118@175game.com>
+Date:   Fri Aug 27 17:49:53 2021 +0800
+
+    第五次修改：加入了表现剩余敌人数量的进度条，同时去掉了更多没必要的Update语句。
+
+[33mcommit e5ed050afe0be868c20b3f5f210c6aba14a4167e[m
+Author: cyf1118 <cyf1118@175game.com>
+Date:   Fri Aug 27 15:14:14 2021 +0800
+
+    第四次修改：实现了商店界面、敌人行动逻辑、子弹发射逻辑、多发子弹发射，并对现有代码进行了大量优化
+
+[33mcommit 33dc9038274402b3dbab70dcf3174be2864b8b31[m
+Author: cyf1118 <cyf1118@175game.com>
+Date:   Wed Aug 18 13:25:05 2021 +0800
+
+    第三次修改：实现了子弹对象池，创建了游戏角色和子弹的Prefab预制体工厂，进一步优化脚本目录结构和组成
+
+[33mcommit 8bb46f3bac0efe70a64a33dc208514b844952657[m
+Author: cyf1118 <cyf1118@175game.com>
+Date:   Fri Aug 13 13:11:48 2021 +0800
+
+    第二次修改：实现了开始游戏UI界面的渐变与Inactive，以及玩家角色工厂的创建
+
+[33mcommit 5eb0241d2dbba1cbbad9b319d015ba5170f064dd[m
+Author: cyf1118 <cyf1118@175game.com>
+Date:   Wed Aug 11 17:31:12 2021 +0800
+
+    第一次修改：添加了拾取和消耗金币时金币图标的动画。
+
+[33mcommit b5f1b5733dafab624147db86a5cead80125676f3[m
+Author: cyf1118 <cyf1118@175game.com>
+Date:   Wed Aug 11 15:45:15 2021 +0800
+
+    第一次提交：完成了基于MVC架构的金币显示、获取、消费以及金币不足导致的消费失败警告提示等功能。

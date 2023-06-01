@@ -1,0 +1,6 @@
+Library/
+*.csproj
+.vscode
+.idea
+Logs/
+Temp/
